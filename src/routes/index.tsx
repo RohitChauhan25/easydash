@@ -2,7 +2,6 @@ import { BrowserRouter, Routes as ReactRoutes, Route } from "react-router-dom";
 import ROUTES from "../constants/routes";
 import AdminLayout from "../layout/AdminLayout";
 import PrivateRoute from "./private";
-import PublicRoute from "./public";
 import { Suspense } from "react";
 import Loader from "../components/Loader";
 
@@ -12,7 +11,7 @@ const Routes = () => {
       <Suspense fallback={<Loader />}>
         <ReactRoutes>
           {ROUTES?.map((route, index) => {
-            const { component: component, path, restricted } = route;
+            const { component, path } = route;
             return (
               <Route
                 key={index}

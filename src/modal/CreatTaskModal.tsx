@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Button, Modal, Input, DatePicker, Form, message } from "antd";
+import { Button, Modal, Input, DatePicker, Form } from "antd";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -27,9 +26,6 @@ const CretaTaskModal = ({ isModalOpen, setIsModalOpen }: any) => {
   } = useForm<TaskFormInputs>({
     resolver: yupResolver(schema),
   });
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
 
   const handleOk = () => {
     setIsModalOpen(false);

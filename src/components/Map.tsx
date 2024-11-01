@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -8,8 +7,6 @@ import {
 import { TargetCountries } from "../constants/data";
 
 const MapChart = () => {
-  const [selectedCountry, setSelectedCountry] = useState(null);
-
   const markers = [
     { name: "Germany", coordinates: [10.4515, 51.1657] },
     { name: "United Kingdom", coordinates: [-3.435973, 55.3781] },
@@ -71,8 +68,7 @@ const MapChart = () => {
                   },
                   pressed: { fill: "#51555C", outline: "none" },
                 }}
-                stroke={selectedCountry === geo.rsmKey ? "#FF5733" : "#2a2b2b"}
-                strokeWidth={selectedCountry === geo.rsmKey ? 2 : 1}
+                // strokeWidth={selectedCountry === geo.rsmKey ? 2 : 1}
               />
             ));
         }}

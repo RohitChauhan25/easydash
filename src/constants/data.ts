@@ -1841,7 +1841,7 @@ export const TargetCountries = [
 //   // },
 // ];
 
-export const Transaction = [
+export const TransactionData = [
   {
     imgUrl:
       "https://img.freepik.com/free-photo/smiling-young-man-with-crossed-arms-outdoors_1140-255.jpg",

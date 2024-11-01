@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Routes from "./routes";
 import "./styles/main.scss";
 import { useSelector } from "react-redux";

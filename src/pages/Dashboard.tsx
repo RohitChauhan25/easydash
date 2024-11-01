@@ -24,7 +24,7 @@ import {
   getProductsByLimit,
   getTopSellingProducts,
 } from "../redux/slices/prodcutsSlice";
-import { getTasks, getTasksByStatus } from "../redux/slices/taskSlice";
+import { getTasksByStatus } from "../redux/slices/taskSlice";
 import AddProductModal from "../modal/AddProductModal";
 
 const Tab = ["Revenue", "Orders", "Visitors"];
@@ -224,12 +224,12 @@ const Dashboard = () => {
                 <img src={item?.icon} alt="" width={20} height={20} />
               </div>
               <div className="data-wrapper ">
-                {item?.id == 3 ? (
+                {item?.id === 3 ? (
                   <p>13.5%</p>
                 ) : (
                   <p>{item?.data ? item?.data : "--"}</p>
                 )}
-                {item?.id == 1 && (
+                {item?.id === 1 && (
                   <>
                     <div className="arrow">
                       <FiArrowDownRight color="#f25c5c" size={18} />
@@ -239,7 +239,7 @@ const Dashboard = () => {
                     </div>
                   </>
                 )}
-                {(item?.id == 2 || item?.id == 3) && (
+                {(item?.id === 2 || item?.id === 3) && (
                   <>
                     <div className="arrow">
                       <FiArrowUpRight color="#8fae75" size={18} />

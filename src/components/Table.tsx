@@ -1,9 +1,8 @@
 import { Select, Table } from "antd";
 import { useState } from "react";
-import { Transaction } from "../constants/data";
 
 const TableComponent = ({ data, columns }: any) => {
-  const [sortedInfo, setSortedInfo] = useState({
+  const [, setSortedInfo] = useState({
     order: null,
     columnKey: null,
   });
@@ -40,9 +39,8 @@ const TableComponent = ({ data, columns }: any) => {
                   { value: "50", label: 50 },
                 ]}
               ></Select>
-              Showing{" "}
-              {perpage < Transaction?.length ? perpage : Transaction?.length} of{" "}
-              {Transaction?.length} results
+              Showing {perpage < data?.length ? perpage : data?.length} of{" "}
+              {data?.length} results
             </div>
           )
         }

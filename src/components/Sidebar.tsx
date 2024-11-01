@@ -19,7 +19,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar, darkMode }: any) {
     } else {
       setactive(0);
     }
-  }, []);
+  }, [currentPath]);
 
   return (
     <aside

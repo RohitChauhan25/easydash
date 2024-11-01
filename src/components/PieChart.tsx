@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell, Legend, Tooltip } from "recharts";
+import { PieChart, Pie, Cell, Legend } from "recharts";
 
 const data02 = [
   { name: "Others", value: 10 },
@@ -9,21 +9,6 @@ const data02 = [
 ];
 
 const totalValue = data02.reduce((sum, entry) => sum + entry.value, 0);
-const CustomTooltip = ({ active, payload }: any) => {
-  if (active && payload && payload.length) {
-    const percentage = ((payload[0].value / totalValue) * 100).toFixed(); // Calculate percentage with 2 decimal places
-
-    return (
-      <div className="custome-tootip">
-        <span className="m-0 p-1">{payload[0].payload.name} </span>
-        {payload.map((entry: any, index: number) => (
-          <span key={index}>{percentage}% </span>
-        ))}
-      </div>
-    );
-  }
-  return null;
-};
 
 const renderCustomLabel = ({
   name,
@@ -31,7 +16,6 @@ const renderCustomLabel = ({
   cx,
   cy,
   midAngle,
-  innerRadius,
   outerRadius,
 }: any) => {
   const RADIAN = Math.PI / 180;

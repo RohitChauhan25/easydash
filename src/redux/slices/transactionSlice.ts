@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Transaction } from "../../constants/data";
+import { TransactionData } from "../../constants/data";
 
 // Define the structure of a single transaction
-interface Transaction {
+
+interface ITransaction {
   imgUrl: string;
   Store_Name: string;
   Name: string;
@@ -16,14 +17,14 @@ interface Transaction {
 
 // Define the structure of the slice state
 interface TransactionsState {
-  transactions: Transaction[];
+  transactions: ITransaction[];
   searchTerm: string; // State to hold the current search term
   activeMode: string; // State to hold the current active mode
 }
 
 // Define the initial state
 const initialState: TransactionsState = {
-  transactions: Transaction,
+  transactions: TransactionData,
   searchTerm: "", // Initialize search term
   activeMode: "Online", // Initialize active mode
 };
@@ -33,7 +34,7 @@ const transactionSlice = createSlice({
   name: "transactions",
   initialState,
   reducers: {
-    addTransaction(state, action: PayloadAction<Transaction>) {
+    addTransaction(state, action: PayloadAction<ITransaction>) {
       state.transactions.push(action.payload);
     },
     removeTransaction(state, action: PayloadAction<number>) {
@@ -43,7 +44,7 @@ const transactionSlice = createSlice({
     },
     updateTransaction(
       state,
-      action: PayloadAction<{ index: number; updatedTransaction: Transaction }>
+      action: PayloadAction<{ index: number; updatedTransaction: ITransaction }>
     ) {
       const { index, updatedTransaction } = action.payload;
       state.transactions[index] = {
