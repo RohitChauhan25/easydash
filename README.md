@@ -27,7 +27,12 @@ Welcome to **EasyDash**! This project is an admin dashboard designed to manage r
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/RohitChauhan25/easyDash.git
    cd easyDash
+
+   npm install
+
+   npm run
    ```
