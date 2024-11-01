@@ -1,26 +1,22 @@
-# Project Name
+# EasyDash
 
-Welcome to **Project Name**! This project is a [brief description of the project, e.g., an e-commerce platform for electronics, an event management admin panel, etc.].
+Welcome to **EasyDash**! This project is an admin dashboard designed to manage real-time data efficiently, featuring intuitive charts and responsive design elements.
 
 ## Table of Contents
 
-- [Project Name](#project-name)
+- [EasyDash](#easydash)
   - [Features](#features)
   - [Tech Stack](#tech-stack)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Features
 
-- [List the main features of your project, for example:]
-  - Charts
-  - Theme switching between light and dark modes
-  - Real-time data handling
-  - Add Products
-  - Add Tasks
-  - Custom layout and responsive design using Ant Design's Row and Col components
+- Interactive charts for data visualization
+- Theme switching between light and dark modes
+- Real-time data handling for dynamic updates
+- Add Products functionality to manage inventory
+- Add Tasks functionality for task management
+- Custom layout and responsive design using Ant Design's Row and Col components
 
 ## Tech Stack
 
