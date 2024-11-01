@@ -20,7 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "permissions": ["scripting", "activeTab", "runtime", "tabs"],
-  "host_permissions": ["<all_urls>"]
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
