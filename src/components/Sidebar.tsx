@@ -8,7 +8,9 @@ import { useLayoutEffect, useState } from "react";
 function Sidebar({ openSidebarToggle, OpenSidebar, darkMode }: any) {
   const [active, setactive] = useState(0);
   const location = useLocation();
-  const currentPath = location.pathname;
+  const currentPath = location?.pathname;
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useLayoutEffect(() => {
     if (currentPath === "/orders") {
       setactive(1);
@@ -19,7 +21,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar, darkMode }: any) {
     } else {
       setactive(0);
     }
-  }, [currentPath]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <aside

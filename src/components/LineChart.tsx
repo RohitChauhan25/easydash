@@ -56,10 +56,10 @@ const CustomTooltip = ({ active, payload }: any) => {
 
   return null;
 };
-const chartHeight = window.innerWidth < 426 ? 300 : 380;
+// const chartHeight = window.innerWidth < 426 ? 300 : 380;
 const Chart = () => {
   return (
-    <ResponsiveContainer width={"100%"} height={chartHeight}>
+    <ResponsiveContainer width={"100%"} height={300}>
       <LineChart data={data}>
         <CartesianGrid
           strokeDasharray="1 0"
@@ -71,7 +71,6 @@ const Chart = () => {
           padding={{ left: 30, right: 30 }}
           // fontSize={"10px"}
           interval={0} // Show all X-axis labels
-          angle={window.innerWidth < 426 ? -45 : 0}
           fontSize={10}
         />
         <YAxis
