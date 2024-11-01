@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://RohitChauhan25.github.io/easydash",
+  "homepage": "https://rohitchauhan25.github.io/easydash",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
