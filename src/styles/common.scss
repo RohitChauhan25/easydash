@@ -1,0 +1,181 @@
+@import "./variables";
+
+.custome-table {
+  background-color: transparent !important;
+  .ant-table {
+    background-color: transparent !important;
+  }
+
+  .ant-table-cell-row-hover {
+    background-color: transparent !important;
+  }
+  .ant-table-cell {
+    color: #9e9ea4;
+  }
+}
+
+.ant-table-thead {
+  background: var(--th);
+}
+
+.custome-table .ant-table-thead > tr > th {
+  background-color: transparent !important;
+  color: #9e9ea4;
+  font-weight: bold; /* Make the header text bold */
+}
+
+.ant-table-footer {
+  background-color: transparent !important;
+  position: absolute;
+  width: 400px;
+  .ant-select {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent !important;
+  }
+  .ant-select-selector {
+    background-color: transparent !important;
+    color: var(--text-color) !important;
+  }
+
+  .ant-select-arrow {
+    color: var(--text-color) !important;
+  }
+}
+
+.recharts-surface {
+  height: 110% !important;
+}
+
+.footer-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  color: var(--text-color);
+  @media (max-width: 426px) {
+    font-size: 10px;
+    top: 17px;
+  }
+}
+
+.ant-pagination-item {
+  background-color: transparent !important;
+  border: 1px solid var(--text-color) !important;
+  color: var(--text-color) !important;
+}
+
+.ant-pagination-item-active {
+  border: 1px solid #55b8ff !important;
+}
+.ant-pagination-next {
+  .ant-pagination-item-link {
+    border-color: var(--text-color) !important;
+  }
+
+  //   color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.ant-pagination-prev {
+  .ant-pagination-item-link {
+    border-color: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+
+.ant-table-placeholder {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: var(--text-color);
+  height: 100%;
+}
+
+.ant-empty-description {
+  color: var(--text-color) !important;
+}
+
+.anticon {
+  color: var(--text-color) !important;
+}
+
+/* tabs start */
+.tabs-wrapper {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  .active {
+    border: 1px solid var(--active);
+  }
+  div:nth-child(1) {
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 4px 8px 4px 8px;
+    background-color: var(--shade-bg);
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    height: fit-content;
+    box-shadow: 0px 1px 4px 0px #00000029;
+  }
+
+  div:nth-child(2) {
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 4px 8px 4px 8px;
+    background-color: var(--shade-bg);
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    box-shadow: 0px 1px 4px 0px #00000029;
+    height: fit-content;
+  }
+}
+
+/* tabs end */
+
+// custom-tooltip
+.custom-tooltip {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  width: 300px;
+
+  // Media query for mobile
+  @media (max-width: 426px) {
+    width: 200px;
+    span {
+      font-size: 10px;
+    }
+  }
+}
+
+.recharts-responsive-container {
+  @media (max-width: 426px) {
+    height: 330px;
+  }
+}
+
+.ant-table td {
+  background-color: transparent !important; /* Remove background color from all cells */
+}
+
+.icon {
+  fill: #d9d9d9;
+}
+
+.Loader {
+  height: 100vh; /* Full viewport height to center vertically */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.Loader img {
+  width: 50%;
+  height: auto;
+}
+
+.profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

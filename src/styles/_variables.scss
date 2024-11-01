@@ -1,0 +1,37 @@
+$primary-color: #3498db;
+$secondary-color: #2f2f30;
+$text-color: #333;
+$bg-color: #201f24;
+$sidebar-width: 250px;
+
+// Light theme variables
+$light-primary-color: #3498db;
+$light-secondary-color: #ffffff;
+$light-text-color: #00000099;
+$light-bg-color: #ffffff;
+$light-shade-bg: #ffffff;
+$light-border: #d7d7d7;
+$light-active-border: #3498db;
+$light-thead: #ffffff;
+
+// Dark theme variables
+$dark-primary-color: #3498db;
+$dark-secondary-color: #2f2f30;
+$dark-primary-text-color: #d7d7d7;
+$dark-bg-color: #201f24;
+$dark-shade-bg: #4d4d4d;
+$dark-border: #ebf6ff;
+$dark-active-border: #ebf6ff;
+$dark-thead: linear-gradient(to bottom, #201f24 50%, #2f2f30 100%);
+
+// Mixin for theme
+@mixin theme($primary, $secondary, $text, $bg, $shade, $bd, $active, $th) {
+  --primary-color: #{$primary};
+  --secondary-bg-color: #{$secondary};
+  --text-color: #{$text};
+  --bg-color: #{$bg};
+  --shade-bg: #{$shade};
+  --border: #{$bd};
+  --active: #{$active};
+  --th: #{$th};
+}

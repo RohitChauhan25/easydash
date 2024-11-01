@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Routes from "./routes";
+import "./styles/main.scss";
+import { useSelector } from "react-redux";
+import { RootState } from "./redux/store";
+const App = () => {
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  useEffect(() => {
+    document.body.classList.toggle("dark-theme", darkMode);
+  }, [darkMode]);
+
+  return <Routes />;
+};
 
 export default App;
