@@ -307,12 +307,7 @@ const Dashboard = () => {
             })}
           </div>
           <Row>
-            <Col
-              xs={24}
-              sm={8}
-              className=""
-              order={window.innerWidth < 426 ? 2 : 1}
-            >
+            <Col xs={24} sm={8} className="">
               <ul className="contry-list">
                 {mapData?.map((country) => {
                   return (
