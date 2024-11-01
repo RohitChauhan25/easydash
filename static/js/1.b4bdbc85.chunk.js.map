@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/1.b4bdbc85.chunk.js","mappings":"4IAAA,MAIA,EAJiBA,KACRC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,W","sources":["pages/Websites.tsx"],"sourcesContent":["const Websites = () => {\n  return <div>Website</div>;\n};\n\nexport default Websites;\n"],"names":["Websites","_jsx","children"],"sourceRoot":""}

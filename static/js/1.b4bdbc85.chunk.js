@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkeasyDash=self.webpackChunkeasyDash||[]).push([[1],{7382:(s,e,a)=>{a.r(e),a.d(e,{default:()=>c});var h=a(579);const c=()=>(0,h.jsx)("div",{children:"Website"})}}]);
-//# sourceMappingURL=1.b4bdbc85.chunk.js.map

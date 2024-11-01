@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/584.21cb235a.chunk.js","mappings":"sJAEA,MAIA,EAJkBA,KACTC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,a","sources":["pages/Customers.tsx"],"sourcesContent":["import React from \"react\";\n\nconst Customers = () => {\n  return <div>customers</div>;\n};\n\nexport default Customers;\n"],"names":["Customers","_jsx","children"],"sourceRoot":""}
