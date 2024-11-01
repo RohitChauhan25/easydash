@@ -34,5 +34,5 @@ Welcome to **EasyDash**! This project is an admin dashboard designed to manage r
 
    npm install
 
-   npm run
+   npm start
    ```
