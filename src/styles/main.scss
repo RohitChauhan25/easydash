@@ -122,6 +122,7 @@ body {
   grid-area: sidebar;
   height: 100%;
   padding: 5px;
+  margin-top: 5px;
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -168,6 +169,8 @@ body {
 .sidebar-list-item:hover {
   background-color: #455a6f;
   border-radius: 12px;
+  font-size: 18px;
+  margin-bottom: 2px;
   cursor: pointer;
 }
 
@@ -191,7 +194,6 @@ body {
 .sidebar-responsive {
   display: inline !important;
   position: absolute;
-
   z-index: 12 !important;
 
   // Media query for mobile
