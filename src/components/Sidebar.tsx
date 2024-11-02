@@ -4,13 +4,18 @@ import { sideMenu } from "../constants/data";
 import SettingsIcon from "../assets/svg/setting";
 import dash from "../assets/img/dash2.png";
 import { useLayoutEffect, useState } from "react";
+import OrderIcon from "../assets/svg/orderIcon";
+import DashboardIcon from "../assets/svg/dashboard";
+import WebsiteIcon from "../assets/svg/website";
+import CustomerIcon from "../assets/svg/customer";
+import { RootState } from "../redux/store";
+import { useSelector } from "react-redux";
 
-function Sidebar({ openSidebarToggle, OpenSidebar, darkMode }: any) {
+function Sidebar({ openSidebarToggle, OpenSidebar }: any) {
   const [active, setactive] = useState(0);
   const location = useLocation();
   const currentPath = location?.pathname;
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const { darkMode } = useSelector((state: RootState) => state.theme);
   useLayoutEffect(() => {
     if (currentPath === "/orders") {
       setactive(1);
@@ -49,16 +54,12 @@ function Sidebar({ openSidebarToggle, OpenSidebar, darkMode }: any) {
               onClick={() => setactive(index)}
             >
               <NavLink to={menu?.path}>
-                {index === 0 ? (
-                  <img
-                    src={darkMode ? menu?.icon : dash}
-                    alt=""
-                    height={20}
-                    width={20}
-                  />
-                ) : (
-                  <img src={menu?.icon} alt="" height={20} width={20} />
+                {index === 0 && <DashboardIcon color={"var(--icon)"} />}
+                {index === 1 && <OrderIcon color={"var(--icon)"} />}
+                {index === 2 && (
+                  <CustomerIcon color={"var(--icon)"} dark={darkMode} />
                 )}
+                {index === 3 && <WebsiteIcon color={"var(--icon)"} />}
                 <span className="menu-item">{menu?.name}</span>
               </NavLink>
             </li>

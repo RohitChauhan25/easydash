@@ -7,12 +7,13 @@ $sidebar-width: 250px;
 // Light theme variables
 $light-primary-color: #3498db;
 $light-secondary-color: #ffffff;
-$light-text-color: #00000099;
+$light-text-color: #151414c7;
 $light-bg-color: #ffffff;
 $light-shade-bg: #ffffff;
 $light-border: #d7d7d7;
 $light-active-border: #3498db;
 $light-thead: #ffffff;
+$light-icon: #000000e5;
 
 // Dark theme variables
 $dark-primary-color: #3498db;
@@ -23,9 +24,20 @@ $dark-shade-bg: #4d4d4d;
 $dark-border: #ebf6ff;
 $dark-active-border: #ebf6ff;
 $dark-thead: linear-gradient(to bottom, #201f24 50%, #2f2f30 100%);
+$dark-icon: #d7d7d7;
 
 // Mixin for theme
-@mixin theme($primary, $secondary, $text, $bg, $shade, $bd, $active, $th) {
+@mixin theme(
+  $primary,
+  $secondary,
+  $text,
+  $bg,
+  $shade,
+  $bd,
+  $active,
+  $th,
+  $icon
+) {
   --primary-color: #{$primary};
   --secondary-bg-color: #{$secondary};
   --text-color: #{$text};
@@ -34,4 +46,5 @@ $dark-thead: linear-gradient(to bottom, #201f24 50%, #2f2f30 100%);
   --border: #{$bd};
   --active: #{$active};
   --th: #{$th};
+  --icon: #{$icon};
 }

@@ -26,9 +26,13 @@ import {
 } from "../redux/slices/prodcutsSlice";
 import { getTasksByStatus } from "../redux/slices/taskSlice";
 import AddProductModal from "../modal/AddProductModal";
+import OrderIcon from "../assets/svg/orderIcon";
+import WebsiteIcon from "../assets/svg/website";
+import BounceIcon from "../assets/svg/bounce";
+import StockIcon from "../assets/svg/stock";
+import AreaChartComponent from "../components/AreaChart";
 
 const Tab = ["Revenue", "Orders", "Visitors"];
-
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
   const [activeTaskTab, setActiveTaskTab] = useState<number>(1);
@@ -40,11 +44,10 @@ const Dashboard = () => {
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddProductModalOpen, setIsAddProductModalOpen] = useState(false);
-
+  const { darkMode } = useSelector((state: RootState) => state.theme);
   const activeMode = useSelector(
     (state: RootState) => state.transactions.activeMode
   );
-  // const TaskData = useSelector((state: RootState) => getTasks(state));
   const completedTasks = useSelector((state: RootState) =>
     getTasksByStatus(state, true)
   );
@@ -53,9 +56,8 @@ const Dashboard = () => {
   );
 
   const transactions = useSelector(selectFilteredTransactions);
-
   const handleTabChange = (mode: string) => {
-    dispatch(setActiveMode(mode)); // Dispatch action to set the active mode
+    dispatch(setActiveMode(mode));
   };
 
   const dispatch = useDispatch();
@@ -216,12 +218,17 @@ const Dashboard = () => {
       </p>
       {/* dashboard cards   */}
       <div className="cards-wrapper">
-        {cardsData?.map((item) => {
+        {cardsData?.map((item: any, index) => {
           return (
             <div key={item?.id} className="col-item">
               <div className="card-title-wrapper">
                 <p className="title">{item?.name}</p>
-                <img src={item?.icon} alt="" width={20} height={20} />
+                {index === 0 && <OrderIcon color={"var(--icon)"} />}
+                {index === 1 && <StockIcon color={"var(--icon)"} />}
+                {index === 2 && <BounceIcon color={"var(--icon)"} />}
+                {(index === 3 || index === 4 || index === 5 || index === 6) && (
+                  <WebsiteIcon color={"var(--icon)"} dark={darkMode} />
+                )}
               </div>
               <div className="data-wrapper ">
                 {item?.id === 3 ? (
@@ -229,7 +236,7 @@ const Dashboard = () => {
                 ) : (
                   <p>{item?.data ? item?.data : "--"}</p>
                 )}
-                {item?.id === 1 && (
+                {/* {item?.id === 1 && (
                   <>
                     <div className="arrow">
                       <FiArrowDownRight color="#f25c5c" size={18} />
@@ -248,10 +255,32 @@ const Dashboard = () => {
                       <div className="">15%</div>
                     </div>
                   </>
-                )}
+                )} */}
+
+                {item?.progress &&
+                  (item?.progress < 0 ? (
+                    <>
+                      <div className="arrow">
+                        <FiArrowDownRight color="#f25c5c" size={18} />
+                      </div>
+                      <div className="profit-wrapper loss ">
+                        <div className="">{item?.progress}%</div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="arrow">
+                        <FiArrowUpRight color="#8fae75" size={18} />
+                      </div>
+                      <div className="profit-wrapper  profit">
+                        <div className="">{item?.progress}%</div>
+                      </div>
+                    </>
+                  ))}
               </div>
               <div>
-                <img src={item?.img} alt="" />
+                {/* <img src={item?.img} alt="" /> */}
+                <AreaChartComponent data={item?.datalive} />
               </div>
             </div>
           );
