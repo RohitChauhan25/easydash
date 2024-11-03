@@ -36,7 +36,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: any) {
     >
       <div className="sidebar-title">
         <div className="sidebar-brand">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" loading="lazy" />
         </div>
         <span className="icon close_icon" onClick={OpenSidebar}>
           X

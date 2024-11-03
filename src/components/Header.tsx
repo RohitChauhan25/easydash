@@ -24,7 +24,12 @@ const Header = ({ OpenSidebar }: any) => {
           <ThemeIcon width={24} height={24} />
         </span>
         <SettingsIcon width={24} height={24} />
-        <img src={profile} alt="profile" className="profile-img" />
+        <img
+          src={profile}
+          alt="profile"
+          className="profile-img"
+          loading="lazy"
+        />
       </div>
     </header>
   );

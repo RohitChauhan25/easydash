@@ -133,6 +133,7 @@ const Dashboard = () => {
               className="rounded-circle"
               width={30}
               height={30}
+              loading="lazy"
             />{" "}
             {Name}
           </div>
@@ -300,10 +301,22 @@ const Dashboard = () => {
           </div>
           <div className="chart-header-right">
             <div>
-              <img src={legendIcon} alt="icon" height={20} width={20} />
+              <img
+                src={legendIcon}
+                alt="icon"
+                height={20}
+                width={20}
+                loading="lazy"
+              />
             </div>
             <div>
-              <img src={earthIcon} alt="icon" height={20} width={20} />
+              <img
+                src={earthIcon}
+                alt="icon"
+                height={20}
+                width={20}
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -491,6 +504,7 @@ const Dashboard = () => {
                       alt="item"
                       width={40}
                       height={40}
+                      loading="lazy"
                     />
                     <div>
                       <p>{item?.name}</p>
@@ -535,6 +549,7 @@ const Dashboard = () => {
                       alt="item"
                       width={40}
                       height={40}
+                      loading="lazy"
                     />
                     <div>
                       <p>{item?.name}</p>

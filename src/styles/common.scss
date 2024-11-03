@@ -1,5 +1,29 @@
 @import "./variables";
 
+/* Start  Search here */
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  padding: 3px;
+  padding-left: 5px;
+
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: #9e9ea4;
+    width: 100%;
+    padding-right: 10px;
+  }
+}
+
+/* customize table */
 .custome-table {
   background-color: transparent !important;
   .ant-table {
@@ -43,10 +67,6 @@
   }
 }
 
-.recharts-surface {
-  height: 110% !important;
-}
-
 .footer-table {
   display: flex;
   justify-content: space-between;
@@ -59,6 +79,9 @@
   }
 }
 
+/* customize table end */
+
+// table pagination
 .ant-pagination-item {
   background-color: transparent !important;
   border: 1px solid var(--text-color) !important;
@@ -72,8 +95,6 @@
   .ant-pagination-item-link {
     border-color: var(--text-color) !important;
   }
-
-  //   color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .ant-pagination-prev {
@@ -96,6 +117,12 @@
 .anticon {
   color: var(--text-color) !important;
 }
+
+.ant-table td {
+  background-color: transparent !important; /* Remove background color from all cells */
+}
+
+//Table pagination end
 
 /* tabs start */
 .tabs-wrapper {
@@ -127,7 +154,6 @@
     height: fit-content;
   }
 }
-
 /* tabs end */
 
 // custom-tooltip
@@ -138,7 +164,6 @@
   border-radius: 5px;
   width: 300px;
 
-  // Media query for mobile
   @media (max-width: 426px) {
     width: 200px;
     span {
@@ -147,26 +172,28 @@
   }
 }
 
+/* chart start */
 .recharts-responsive-container {
   @media (max-width: 426px) {
     height: 330px;
   }
 }
 
-.ant-table td {
-  background-color: transparent !important; /* Remove background color from all cells */
+.recharts-surface {
+  height: 110% !important;
 }
+/* chart end */
 
 .icon {
   fill: var(--icon);
 }
 
 .Loader {
-  height: 100vh; /* Full viewport height to center vertically */
+  height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .Loader img {

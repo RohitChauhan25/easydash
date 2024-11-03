@@ -86,7 +86,6 @@ export default function PieChartComponent() {
           />
         ))}
       </Pie>
-      {/* <Tooltip content={<CustomTooltip />} /> */}
       <Legend />
     </PieChart>
   );

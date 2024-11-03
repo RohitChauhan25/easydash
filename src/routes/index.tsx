@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<div>.</div>}>
         <ReactRoutes>
           {ROUTES?.map((route, index) => {
             const { component, path } = route;
